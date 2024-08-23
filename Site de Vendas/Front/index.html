@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abidas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="overlay"></div>
+    <header class="header">
+        <div class="menu">
+            <div class="lado-esquerdo-menu">
+                <div class="logo">
+                    <img src="images/abidas-t2.svg">
+                </div>
+                <form action="" class="barradeprocura">
+                    <input type="search" name="" placeholder="Procure aqui seu produto..." id="search-box">
+                </form>
+            </div>
+            <div class="lado-direito-menu">
+                <div><label for="search-box" class="fas fa-search" id="search-btn"></label></div>
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="login-btn">
+                <p>Entre ou Cadastra-se</p>
+                </div>
+                <a href="cadProd.html" class="fa-solid fa-box"></a>
+                <div id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="carrinho-contador">0</span>
+            </div>
+            </div>
+        </div>
+
+        <!--CARRINHO-->
+
+        <div class="cart">
+            <h2 class="cart-title">Seu Carrinho</h2>
+
+            <!--CONTEÚDO CARRINHO-->
+            <div class="cart-content">
+                
+        </div>
+
+        <!--TOTAL-->
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        
+        <!--BOTÃO COMPRAR-->
+        <a href="pagamento.html">
+        <button type="button" class="btn-buy">Comprar agora</button>
+    </a>
+        <!--FECHAR CARRINHO-->
+        <i class="fas fa-times" id="cart-close"></i>
+    </div>
+        <div class="header-2">
+            <nav class="navbar">
+                    <div id="login-btn2">
+                    <p>Entre ou Cadastra-se</p>
+                    </div>
+                    <a href="#" class="menu-black">Black Friday</a>
+                    <a href="#" class="menu-fem">Feminino</a>
+                    <a href="#" class="menu-masc">Masculino</a>
+                    <a href="#" class="menu-infan">Infantil</a>
+                    <a href="#">Novidades</a>
+                    <div id="cadastro2">
+                        <a href="cadProd.html" class="fa-solid fa-box"></a>
+                    </div>
+            </nav>
+        </div>
+    </header>
+    <div class="slider">
+       <div class="slides">
+              <!--Botões-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <!--Slide Imagens-->
+            <div class="slide first">
+                    <img src="./images/blackfriday.jpg" alt="imagem 1">
+            </div>
+            <div class="slide ">
+                <img src="./images/127fb428-d0a2-4ede-8198-6d9b6f7b9d3e.jpg" alt="imagem 2">
+        </div>
+        <div class="slide ">
+            <img src="./images/175832c6-7c73-46ee-bcc0-3bc74274d701.jpg" alt="imagem 3">
+    </div>
+    <div class="slide ">
+        <img src="./images/EB071600-D40A-4626-9000-226C222D6F92.jpg" alt="imagem 4">
+    </div>
+                <!--Fim Slide Imagens-->
+
+                <!--Navigation Auto-->
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+       </div>
+
+       <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+       </div>
+
+    </div>
+
+    <!--Side Bar-->
+
+    <div class="side-bar">
+        <div class="search-bar">
+            <input type="search" name="barraprocura2" placeholder="Busque aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="sidebar-header">
+            <img src="./images/Como-e-por-onde-comecar-a-Pre-Black-Friday.webp" alt="Logo">
+            <h2>MELHORES DA BLACK FRIDAY</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="#">Vestidos em até 50% OFF</a>
+            <a href="#">Camisetas masculinas em 70% OFF</a>
+            <a href="#">Infatil até 60% OFF</a>
+            <a href="#">Bermuda masculina em até 60% OFF</a>
+            <a href="#">Calça em até 70% OFF</a>
+        </div>
+    </div>
+
+    <div class="side-bar2">
+        <div class="search-bar2">
+            <input type="search" name="barraprocura2" placeholder="Busque aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="sidebar-header2">
+            <img src="./images/fem.webp" alt="Logo">
+            <h2>Moda Feminina</h2>
+        </div>
+        <div class="sidebar-menu2">
+            <a href="#">Vestidos</a>
+            <a href="#">Calças</a>
+            <a href="#">Bermuda e Shorts</a>
+            <a href="#">Croppeds</a>
+            <a href="#">Camisas</a>
+        </div>
+    </div>
+
+    <div class="side-bar3">
+        <div class="search-bar3">
+            <input type="search" name="barraprocura2" placeholder="Busque aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="sidebar-header3">
+            <img src="./images/masc.webp" alt="Logo">
+            <h2>Moda Masculina</h2>
+        </div>
+        <div class="sidebar-menu3">
+            <a href="#">Vestidos<i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#">Calças</a>
+            <a href="#">Bermuda e Shorts</a>
+            <a href="#">Croppeds</a>
+            <a href="#"> Camisas</a>
+        </div>
+    </div>
+
+    <div class="side-bar4">
+        <div class="search-bar4">
+            <input type="search" name="barraprocura2" placeholder="Busque aqui...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="sidebar-header3">
+            <img src="./images/infantil.jpg" alt="Logo">
+            <h2>Moda Infatil</h2>
+        </div>
+        <div class="sidebar-menu4">
+            <a href="#">Bebê Feminino</a>
+            <a href="#">Bebê Masculino</a>
+            <a href="#">Meninas de 2 a 6 Anos </a>
+            <a href="#">Meninos de 2 a 6 Anos</a>
+            <a href="#">Meninas de 7 a 14 Anos</a>
+            <a href="#">Meninos de 7 a 14 Anos</a>
+        </div>
+    </div>
+     
+    <!--Tela de Login-->
+
+    <div id="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+       <header class="Cabeçalho-Login">
+        <h2>Faça seu Login!</h2>
+       </header>
+        <form action="">
+            <h3>Login</h3>
+            <span>E-mail ou Telefone</span>
+            <input type="email" name="email" placeholder="Coloque seu e-mail ou telefone..." id="email" autocomplete="email">
+            <span>Senha</span>
+            <div class="password-container">
+                <input type="password" name="senha" placeholder="Coloque sua senha aqui..." id="senha">
+                <i class="fas fa-eye" id="btn-senha" onclick="mostrarSenha()"></i>
+            </div>            
+                <p class="esqueceu"><b>Esqueceu sua senha ?</b></p>
+            <div class="btn2">
+                <button type="submit">Entrar</button>
+                <div>
+                <span>ou</span>
+                </div>
+                <h3>FAÇA SEU LOGIN COM REDE SOCIAL</h3>
+            </div>
+                <div class="google">
+                    <button class="GoogleButton">
+                        <img src="./images/google.svg">
+                    </button>
+                </div>
+                <div class="Cadastro">
+                    <button class="cadastroBtn" form="form">QUERO ME CADASTRAR</button>
+                </div>
+        </form>
+
+    </div>
+
+    <!--Tela de Cadastro-->
+    <div id="form">
+        <button id="voltarBtn">
+            <i class="fas fa-arrow-left"></i> Voltar ao Login
+        </button>
+        <form action="ConexaoDB.php" method="POST">
+          <h2 class="title">Cadastrar</h2>
+          <label for="nome">Nome</label>
+          <div class="input">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <input id="nome" type="text" name="nome" placeholder="Nome" required><br><br>
+          </div>
+  
+          <label for="telefone">Telefone</label>
+            <div class="input">
+             <i class="fa fa-mobile" aria-hidden="true"></i>
+            <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br><br>
+            </div>
+
+  
+          <label for="email">Email</label>
+          <div class="input">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required autocomplete="email"><br><br>
+          </div>
+  
+          <label for="endereco">Endereço</label>
+          <div class="input">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <input type="text" name="endereco" id="endereco" placeholder="Endereço" required><br><br>
+          </div>          
+          
+          <div id="btn">
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
+        </div>
+        <h1 class="titulo-oferta">Combos</h1>
+        <img class="combos" src="images/combos.png" alt="combos"
+    </div>
+    <div>
+        <h1 class="titulo-oferta">Ofertas para você</h1>
+    </div>
+            <!--Seção de cards-->
+            <div class="secao4-div">
+                <div class="card">
+                    <img src="images/bone juvenil.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Bone juvenil</h2> <!--Nome do produto-->
+                    <p>boné juvenil stitch aba curva lilás</p> <!--Descrição-->
+                    <p class="product-price">R$ 49,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="images/saida de praia.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Saida de praia</h2>  <!--Nome do produto-->
+                    <p>vestido saída de praia renda off white</p> <!--Descrição-->
+                    <p class="product-price">R$ 59,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="images/calça de sarja.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Calça de sarja</h2> <!--Nome do produto-->
+                    <p>calça de sarja jogger com elástico e cordão preto</p> <!--Descrição-->
+                    <p class="product-price">R$ 89,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="images/calça jeans.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Calça de jeans</h2> <!--Nome do produto-->
+                    <p>calça de jeans mom cintura alta azul</p> <!--Descrição-->
+                    <p class="product-price">R$ 99,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/camisa futebol.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Camiseta futebol </h2> <!--Nome do produto-->
+                    <p>  camiseta futebol manga curta esportiva branca</p> <!--Descrição-->
+                    <p class="product-price">R$ 69,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/camisa polo.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Camisa polo</h2> <!--Nome do produto-->
+                    <p> polo de algodão texturizada manga curta preto</p> <!--Descrição-->
+                    <p class="product-price">R$ 89,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/camisa floral.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Camisa floral</h2> <!--Nome do produto-->
+                    <p>camisa de viscose floral manga curta multicor</p> <!--Descrição-->
+                    <p class="product-price">R$ 79,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/camisaregata.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Regata básica</h2> <!--Nome do produto-->
+                    <p>regata básica canelada cinza mescla</p> <!--Descrição-->
+                    <p class="product-price">R$ 49,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+            </div>
+            </div>
+            <div class="preços">
+                <h1 class="titulo-oferta">Navegue pelos preços</h1>
+                <img class="preços" src="images/Preços.png" alt="Preços">
+            </div>
+            <div>
+                <img class="faixa" src="images/faixaabidas.png" alt="faixa">
+            </div>
+            <div>
+                <h1 class="titulo-oferta">Mais ofertas exclusivas para você</h1>
+            </div>
+                <!--Seção de cards-->
+            <div class="secao4-div">
+                <div class="card">
+                    <img src="images/regata feminina.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Regata Feminina</h2> <!--Nome do produto-->
+                    <p> regata de tricot canelada off white</p> <!--Descrição-->
+                    <p class="product-price">R$ 69,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="images/blusa feminina.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Blusa preta</h2>  <!--Nome do produto-->
+                    <p>blusa de viscose com botões manga curta preto</p> <!--Descrição-->
+                    <p class="product-price">R$ 39,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="images/cropped.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Cropped preto</h2> <!--Nome do produto-->
+                    <p>cropped de algodão halter neck preto</p> <!--Descrição-->
+                    <p class="product-price">R$ 49,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="images/top esportivo.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Top esportivo</h2> <!--Nome do produto-->
+                    <p>top canelado decote nadador esportivo preto</p> <!--Descrição-->
+                    <p class="product-price">R$ 69,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/camisa moletom infantil.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Camisa moletom</h2> <!--Nome do produto-->
+                    <p> camiseta de moletom juvenil com capuz verde claro</p> <!--Descrição-->
+                    <p class="product-price">R$ 99,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/camisa patrulha canina.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Camisa patrulha canina</h2> <!--Nome do produto-->
+                    <p>camiseta de algodão infantil patrulha canina</p> <!--Descrição-->
+                    <p class="product-price">R$ 39,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/vestido infantil.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Vestido colorido infantil</h2> <!--Nome do produto-->
+                    <p>vestido infantil manga curta colorida</p> <!--Descrição-->
+                    <p class="product-price">R$ 79,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+                <div class="card">
+                    <img src="images/vestido ursinho infantil.webp" alt="Produto" class="product-img"> <!--colocar foto do produto-->
+                    <h2 class="product-title">Vestido de ursinho</h2> <!--Nome do produto-->
+                    <p> vestido infantil urso napolitano de algodão azul</p> <!--Descrição-->
+                    <p class="product-price">R$ 59,99</p> <!--Preço-->
+                    <button class="paracomprar">Adicionar ao Carrinho</button></br>
+                </div>
+            </div>
+            </div>
+            <div>
+                <footer>
+                    <h2 class="titulo">institucional</h2>
+                    <p>sobre a ABIDAS</p>
+                    <p>fornecedores</p>
+                    <p>tabalhe conosco</p>
+                    <p>sustentabilidade</p> <br>
+                    <h2 class="titulo">Serviços</h2>
+                    <p>tipos de entrega</p>
+                    <p>clique e retire</p>
+                    <p>trocas e devoluções</p>
+                    <p>formas de pagamento</p> <br>
+                    <h2 class="titulo">atendimento</h2>
+                    <p>ajuda</p>
+                    <p>fale conosco</p>
+                    <p> nossas lojas</p> <br>
+                </footer>
+            </div>
+            <div>
+                <p class="direitos">Todos direitos reservados.</p>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html> 

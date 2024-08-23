@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar produto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+            <div class="lado-esquerdo-menu">
+                <div class="logo">
+                 <a href="index.html"><img src="images/abidas-t2.svg"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="cadastro">
+    <div id="cadastrar-produto">
+        <h1>Cadastrar Produto</h1>
+        <form action="produtos.php" method="POST">
+            <span>Nome do produto</span>
+            <input type="nome" name="nome" placeholder="Coloque o nome do seu produto" id="nomeproduto"><br>
+            <span>Preço do produto</span>
+         <input type="nome" name="preco" placeholder="Coloque o preço do seu produto" id="nomeproduto"><br>
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

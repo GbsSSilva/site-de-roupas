@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagamento.css">
+    <title>Tela de Pagamento</title>
+</head>
+<body>
+
+<div class="payment-form">
+    <div class="payment-section" id="payment-section">
+        <h2 class="dados">Dados de Pagamento</h2>
+        <label for="cardName">Nome no Cartão:</label>
+        <input type="text" id="cardName">
+
+        <label for="cardNumber">Número do Cartão:</label>
+        <input type="text" id="cardNumber">
+
+        <div class="small-inputs">
+            <div>
+                <label for="expiryDate">Data de Validade:</label>
+                <input type="text" id="expiryDate">
+            </div>
+            <div>
+                <label for="securityCode">Código de Segurança:</label>
+                <input type="text" id="securityCode">
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-section">
+        <h2>Endereço de Entrega</h2>
+        <label for="fullName">Nome Completo:</label>
+        <input type="text" id="fullName">
+
+        <label for="address">Endereço:</label>
+        <input type="text" id="address">
+
+        <label for="city">Cidade:</label>
+        <input type="text" id="city">
+
+    </div>
+
+    <div class="calculate-shipping">
+        <h2>Calcular Frete</h2>
+        <label for="destinationZip">CEP de Destino:</label>
+        <input type="text" id="destinationZip">
+        <button onclick="consultaCep()">Consultar CEP</button>
+        <div id="shippingCost"></div>
+        <div id="return"></div>
+    </div>
+
+    <div class="payment-summary">
+        <h2>Total a Pagar</h2>
+        <div id="subtotal">Subtotal: R$ 0.00</div>
+        <div id="totalShipping"></div>
+        <div id="totalAmount">Total: R$ 0.00</div>
+        <button onclick="payNow()">Pagar Agora</button>
+    </div>
+</div>
+
+<script src="pagamento.js"></script>
+</body>
+</html>

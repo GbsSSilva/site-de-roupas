@@ -1,0 +1,1378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+
+
+body{
+    height: 300rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: black;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+    background: #fff;
+    box-shadow: 1px;
+}
+
+.header{
+    position: relative;
+}
+
+.header .header-2 .navbar #cadastro2{
+    display: none;
+}
+
+.header .menu .logo{
+    font-weight: bold;
+}
+
+.lado-esquerdo-menu{
+    display: flex;
+    align-items: center;
+    gap: 145px;
+}
+
+.header .header-2{
+    background: white;
+}
+
+.header .header-2 .navbar{
+      text-align: center;
+}
+
+.header .header-2 .navbar a{
+    color: black;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+    margin: 0 1rem;
+}
+
+.menu.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 999;
+}
+
+.header .header-2 .navbar a:hover{
+     background: #ccc;
+}
+
+.barradeprocura {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 5rem;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    z-index: 999;
+    margin-bottom: 30px;
+}
+
+.barradeprocura input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: black;
+    top: 32%;
+    left: 50%;
+}
+
+.barradeprocura label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: black;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.barradeprocura label:hover{
+    color: gray;
+}
+
+#search-btn {
+    display: none;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    max-width: 100%;
+    height: auto;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.manual-btn {
+    border: 2px solid #FFD700;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+} 
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #FFD700;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #FFD700;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFD700;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFD700;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #FFD700;
+}
+
+@media screen and (max-width: 768px) {
+    .manual-navigation,
+    .navigation-auto {
+        display: none;
+    }
+
+    .slides input {
+        display: block;
+        position: absolute;
+        opacity: 0;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    #radio1:checked ~ .first,
+    #radio2:checked ~ .first,
+    #radio3:checked ~ .first,
+    #radio4:checked ~ .first {
+        margin-left: 0;
+    }
+}
+
+.side-bar{
+   background: white;
+   width: 400px;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: -100%;
+   overflow-y: auto;
+   transition: left 0.4s ease;
+}
+
+.search-bar {
+    padding: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.search-box {
+    display: none;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #E8E8E8;
+}
+
+.sidebar-header img {
+    width: 100%;
+    max-width: none;
+    
+}
+
+.sidebar-header h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    transition: background 0.3s ease;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar-menu a:hover{
+    background: #ccc;
+    transition: 0.3s ease;
+}
+
+.side-bar.active{
+    left: 0;
+}
+
+.side-bar2 {
+    background: white;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+ }
+ 
+ .search-bar2 {
+     padding: 20px;
+     text-align: center;
+     padding-top: 50px;
+     
+ }
+ 
+ .search-bar2 input {
+     width: 80%;
+     padding: 10px;
+     margin-top: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ .sidebar-header2 {
+     padding: 20px;
+     text-align: center;
+     background-color: #E8E8E8;
+ }
+ 
+ .sidebar-header2 img {
+     width: 100%;
+     max-width: none;
+ }
+ 
+ .sidebar-header2 h2 {
+     margin-top: 10px;
+     font-size: 1.5rem;
+ }
+ 
+ .sidebar-menu2 a {
+     display: block;
+     padding: 10px;
+     text-decoration: none;
+     color: black;
+     font-size: 1.8rem;
+     transition: background 0.3s ease;
+     font-style: normal;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .sidebar-menu2 a:hover{
+     background: #ccc;
+     transition: 0.3s ease;
+ }
+ 
+ .side-bar2.active{
+     left: 0;
+ }
+ 
+ .side-bar3 {
+    background: white;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+ }
+ 
+ .search-bar3 {
+     padding: 20px;
+     text-align: center;
+     padding-top: 50px;
+ }
+ 
+ .search-bar3 input {
+     width: 80%;
+     padding: 10px;
+     margin-top: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ .sidebar-header3 {
+     padding: 20px;
+     text-align: center;
+     background-color: #E8E8E8;
+ }
+ 
+ .sidebar-header3 img {
+     width: 100%;
+     max-width: none;
+     
+ }
+ 
+ .sidebar-header3 h2 {
+     margin-top: 10px;
+     font-size: 1.5rem;
+ }
+ 
+ .sidebar-menu3 a {
+     display: block;
+     padding: 10px;
+     text-decoration: none;
+     color: black;
+     font-size: 1.8rem;
+     transition: background 0.3s ease;
+     font-style: normal;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .sidebar-menu3 a:hover{
+     background: #ccc;
+     transition: 0.3s ease;
+ }
+ 
+ .side-bar3.active{
+     left: 0;
+ }
+
+ .side-bar4 {
+    background: white;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+ }
+ 
+ .search-bar4 {
+     padding: 20px;
+     text-align: center;
+     padding-top: 50px;
+ }
+ 
+ .search-bar4 input {
+     width: 80%;
+     padding: 10px;
+     margin-top: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ .sidebar-header4 {
+     padding: 20px;
+     text-align: center;
+     background-color: #E8E8E8;
+ }
+ 
+ .sidebar-header4 img {
+     width: 100%;
+     max-width: none;
+     
+ }
+ 
+ .sidebar-header4 h2 {
+     margin-top: 10px;
+     font-size: 1.5rem;
+ }
+ 
+ .sidebar-menu4 a {
+     display: block;
+     padding: 10px;
+     text-decoration: none;
+     color: black;
+     font-size: 1.8rem;
+     transition: background 0.3s ease;
+     font-style: normal;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .sidebar-menu4 a:hover{
+     background: #ccc;
+     transition: 0.3s ease;
+ }
+ 
+ .side-bar4.active{
+     left: 0;
+ }
+
+ .header .menu .lado-direito-menu div,
+ .header .menu .lado-direito-menu a{
+    font-size: 2.5rem;
+    margin-left: 3.5rem;
+    color: black;
+    cursor: pointer;
+ }
+
+ .header .menu .lado-direito-menu div:hover,
+ .header .menu .lado-direito-menu a:hover{
+    color: gray;
+ }
+
+#menu-btn{
+    display: none;
+}
+
+ #overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    pointer-events: auto; 
+    opacity: 0.5;
+    transition: opacity 0.5s; 
+}
+
+#login-form-container {
+    width: 400px; 
+    height: min-content; 
+    margin: 0 auto;
+    background: #fff;
+    padding: 60px; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001; 
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#login-form-container .Cabeçalho-Login {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-form-container .Cabeçalho-Login h2 {
+    color: #333;
+    font-size: x-large;
+}
+
+#login-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form-container form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#login-form-container span {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+#login-form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form-container .password-container {
+    position: relative;
+}
+
+#login-form-container #senha { 
+    padding-right: 30px; 
+}
+
+#login-form-container #btn-senha{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 10px; 
+    cursor: pointer;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+#login-form-container p {
+    font-size: 1.2rem;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #555;
+    cursor: pointer;
+}
+
+#login-form-container .btn2 {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+#login-form-container .btn2 div span {
+    margin: 10px 0; 
+    display: block; 
+    font-size: 1.0rem;
+}
+
+#login-form-container .btn2 h3 {
+    font-size: 1.5rem;
+}
+
+#login-form-container .btn2 button {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #000000, #333333, #f5f5f5);
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#login-form-container .btn2 button:hover {
+    background: linear-gradient(-45deg, #f5f5f5, #333333, #000000);
+}
+
+#login-form-container .Cadastro button {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #000000, #333333, #f5f5f5);
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: black;
+    cursor: pointer;
+}
+
+#login-form-container .google {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#login-form-container .google button::before {
+    display: flex;
+    padding: 0;
+    margin-right: 10px;
+    border: 2px solid #4285F4;
+    border-radius: 5px;
+    color: #4285F4;
+    cursor: pointer;
+}
+
+#login-form-container .google button {
+    background-color: white;
+    width: 40px; 
+    height: 40px; 
+    color: #4285F4;
+    border: 2px solid #4285F4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-form-container .google button img {
+    width: 20px; 
+    margin-right: 5px; 
+}
+
+#login-form-container .Cadastro {
+    margin-top: 20px;
+}
+
+#login-form-container .Cadastro button:hover {
+    background: linear-gradient(-45deg, #f5f5f5, #333333, #000000);
+}
+
+#form {
+    display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    padding: 60px;
+    width: min-content;
+    color: #2b344b;
+    pointer-events: auto;
+    z-index: 1001;
+}
+
+#login-btn2{
+    display: none;
+}
+
+#form #voltarBtn{
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+#form #voltarBtn:hover{
+    background-color: gray;
+}
+
+.title {
+    font-size: 1.8em;
+    margin-bottom: 10%;
+}
+
+.input {
+    min-width: 280px;
+    height: 30px;
+    border-radius: 22px;
+    border: 2px #6f7e8a solid;
+    padding: 5px;
+    margin: 0px 0px 12px -5px;
+}
+
+.input i {
+    font-size: 1.2em;
+    padding: 5px;
+    background: -webkit-linear-gradient(-45deg, #000000, #333333, #f5f5f5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input input {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transform: translateY(-10%);
+    color: #2b344b;
+    font-size: 11pt;
+}
+
+#btn {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+#btn button {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #000000, #333333, #f5f5f5);
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#btn button:hover {
+    background: linear-gradient(-45deg, #f5f5f5, #333333, #000000);
+}
+
+@keyframes sair {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes iniciar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sair {
+    animation: sair 0.5s ease;
+}
+
+.iniciar {
+    animation: iniciar 0.5s ease;
+}
+
+.lado-direito-menu{
+    display: flex;
+    align-items: center;
+}
+
+.lado-direito-menu #login-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; 
+    font-size: 1.5rem; 
+}
+
+.lado-direito-menu #login-btn i {
+    margin-right: 10px; 
+    font-size: 2.5rem !important; 
+}
+.lado-direito-menu #login-btn p {
+    margin-right: 15px; 
+    font-size: 1.3rem !important;
+    font-weight: bold;
+    color: black;
+}
+
+.lado-direito-menu .fa-user{
+    font-size: 2.5rem !important;
+    margin-left: 15px
+}
+
+#cart-icon{
+   font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 5px;
+    position: relative;
+}
+
+#carrinho-contador {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+  }
+
+/*CARRINHO*/
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
+    border: 1px solid #333;
+    transition: 1.5s;
+    z-index: 1001;
+    font-size: 16px;
+}
+
+.cart.active{
+    right: 0;
+    transition: .5s;
+    z-index: 1001;
+}
+
+.cart-title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 2rem;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: .5rem;
+}
+
+.cart.product-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+.cart-price{
+    font-weight: 100;
+    color: #171327;
+}
+
+.cart-quantity{
+    border: 1px solid black;
+    outline-color: #2b344b;
+    width: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.cart-remove{
+    font-size: 24px;
+    color: #fd4646;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title{
+    font-size: 1.8rem;
+    font-weight: 1000;
+}
+
+.total-price{
+    margin-left: .5rem;
+}
+
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-buy:hover{
+    background-color:gray;
+}
+
+#cart-close{
+    position: absolute;
+    top: 1rem;
+    right: .8rem;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+}
+/*estilo dos card*/
+
+.secao4-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; 
+    text-align: center;
+}
+
+.secao4-div-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+.combos {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.preços {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.faixa{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card img {
+    max-width: 80%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    filter: brightness(70%);
+}
+
+.titulo-oferta {
+    text-align: center;
+    padding-top: 25px;
+}
+
+p {
+    color: #666;
+}
+
+.product-price {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.paracomprar {
+    background-color: #000000;
+    color: #fafafa;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.paracomprar :hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #000000;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; 
+    text-align: center;
+}
+
+.titulo {
+    color: white;
+}
+
+.direitos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; 
+    text-align: center;
+}
+
+/* CARDPROD */
+
+#cadastro {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+}
+
+#cadastrar-produto {
+    max-width: 550px;
+    margin: 0 auto; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
+    border: solid;
+}
+
+#cadastrar-produto:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#cadastrar-produto button {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #000000, #333333, #f5f5f5);
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px; 
+}
+
+#cadastrar-produto  button:hover {
+    background: linear-gradient(-45deg, #f5f5f5, #333333, #000000);
+}
+
+
+#cadastrar-produto form {
+    display: flex;
+    flex-direction: column;
+}
+
+#cadastrar-produto span {
+    font-size: 1.5rem; 
+    margin-bottom: 5px;
+}
+
+#cadastrar-produto input {
+    box-sizing: border-box; 
+}
+
+#cadastrar-produto input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cadastrar-produto h1 {
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    #cadastro {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #cadastrar-produto {
+        max-width: 100%;
+    }
+}
+
+
+
+/* RESPONSIVO */
+
+@media (max-width: 991px) {
+    
+    html {
+        font-size: 55%;
+    }
+
+    /* Example: Adjust the size of your navigation items */
+    .header .menu{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #cadastro {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #cadastrar-produto {
+        max-width: 100%;
+    }
+
+
+    .secao4-div-card {
+        width: calc(50% - 20px);
+    }
+        .combos,
+        .preços,
+        .faixa {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+    .header .lado-direito-menu #login-btn{
+      display: none;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+    
+    .header {
+        position: relative;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%; 
+        width: 50%; 
+        height: 50vh; 
+        background-color: white;
+        border: 0.5rem solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinha o conteúdo no topo */
+        align-items: center;
+        transition: left 0.3s ease; 
+        z-index: 1001;
+    }
+    
+    .navbar.active {
+        left: 0; 
+    }
+    
+    .navbar #login-btn2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: -1; 
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ddd; 
+    }
+    
+    .navbar #login-btn2 p {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .navbar a {
+        margin: 0.5rem 1.5rem; 
+        padding: 1.5rem;
+        background: #f6f6f6;
+        font-size: 2rem;
+        display: block;
+        border-radius: 0.5rem;
+        width: 100%;
+        z-index: 1000;
+        border: 2px solid #ddd;
+    }
+
+        .menu {
+            position: relative;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .menu .lado-esquerdo-menu .barradeprocura {
+            position: absolute;
+            top: -115%;
+            right: 2rem;
+            width: 90%;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .menu .lado-esquerdo-menu .barradeprocura.active {
+            top: 115%;
+        }
+    }
+
+
+@media (max-width: 450px) and (max-widht: 375px) {
+    
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .side-bar2 {
+        display: none;
+    }
+}
+
+/* Side-bar3 */
+@media screen and (max-width: 375px) {
+    .side-bar3 {
+        display: none;
+    }
+}
+
+/* Side-bar4 */
+@media screen and (max-width: 375px) {
+    .side-bar4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .side-bar,
+    .side-bar2,
+    .side-bar3,
+    .side-bar4 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .cart {
+        width: 100%;
+    }
+    .header .lado-direito-menu a{
+        display: none;
+    }
+    .header .header-2 .navbar #cadastro2{
+        display: block;
+        margin-top: 30px;
+    }
+}
